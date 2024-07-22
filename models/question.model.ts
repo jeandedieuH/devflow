@@ -3,12 +3,19 @@ import { Schema, models, model, Document } from "mongoose";
 export interface IQuestion extends Document {
   title: string;
   content: string;
-  tags: Schema.Types.ObjectId[];
+  tags: {
+    _id: string;
+    name: string;
+  }[];
   description: string;
   views: number;
-  upvotes: Schema.Types.ObjectId[];
-  downvotes: Schema.Types.ObjectId[];
-  author: Schema.Types.ObjectId;
+  upvotes: string[];
+  downvotes: string[];
+  author: {
+    _id: string;
+    name: string;
+    picture: string;
+  };
   answers: Schema.Types.ObjectId[];
   createdAt: Date;
 }

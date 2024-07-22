@@ -22,11 +22,12 @@ export interface CreateAnswerParams {
   question: string; // Question ID
   path: string;
 }
+
 export interface GetAnswersParams {
-  answerId: string;
   sortBy?: string;
   page?: number;
   pageSize?: number;
+  questionId?: string;
 }
 
 export interface AnswerVoteParams {

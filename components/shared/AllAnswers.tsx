@@ -10,7 +10,6 @@ import Voting from "./Voting";
 
 interface Props {
   questionId: string;
-
   userId: string;
   totalAnswers: number;
   page?: number;
