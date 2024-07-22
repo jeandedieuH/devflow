@@ -16,13 +16,7 @@ interface Props {
   filter?: number;
 }
 
-async function AllAnswers({
-  questionId,
-  userId,
-  totalAnswers,
-  page,
-  filter,
-}: Props) {
+async function AllAnswers({ questionId, userId, totalAnswers }: Props) {
   const result = await getAnswers({ questionId });
 
   return (
